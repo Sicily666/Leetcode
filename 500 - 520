@@ -1,0 +1,27 @@
+**509**
+public int fib(int N) {
+        if (N == 0) {
+            return 0;
+        }
+        if (N == 1) {
+            return 1;
+        }
+        return fib(N-1) + fib(N-2);
+        
+    }
+    
+ public int fib(int N) {
+        if (N == 0) {
+            return 0;
+        }
+        if (N == 1) {
+            return 1;
+        }
+        int a = 0;
+        int b = 1;
+        for (int k = 2; k < N + 1; k++) {
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
